@@ -1,24 +1,33 @@
 import React from "react";
 import styles from "../styles/index.module.css";
-const Index = () => {
-  React.useEffect((): any => import("@google/model-viewer"), []);
+import Link from "next/link";
 
+const index = () => {
   return (
     <>
-      <model-viewer
-        class={styles.model_viewer}
-        src="https://ar-resume-assets.s3.eu-west-2.amazonaws.com/one.glb"
-        ar
-        ar-modes="webxr scene-viewer quick-look"
-        ar-scale="fixed"
-        camera-controls
-        camera-target="0m 1.6m -0.2m"
-        exposure="0.3"
-        alt="A 3D model of Nnadozie's cv"
-        ios-src="https://ar-resume-assets.s3.eu-west-2.amazonaws.com/one.usdz"
-      ></model-viewer>
+      <h1>Hello, I'm Dozie!</h1>
+      <p>Lorem ipsum</p>
+      <p>
+        Find me on <a href="https://www.linkedin.com/in/nnadozie-okeke">LN </a>
+        <a href="https://github.com/Nnadozie">GH </a>
+        <a href="https://twitter.com/dozieokk">TW </a>
+        <a>mail</a>
+      </p>
+      <p>
+        View my
+        <Link href="/cv">
+          <a> cv in augmented reality </a>
+        </Link>
+        and <a href="">download in pdf format</a>
+      </p>
+      <p>
+        Still here?
+        <Link href="/blog">
+          <a> Check out my latest tech articles.</a>
+        </Link>
+      </p>
     </>
   );
 };
 
-export default Index;
+export default index;
