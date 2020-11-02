@@ -16,7 +16,11 @@ const cv = () => {
         exposure="0.3"
         alt="A 3D model of Nnadozie's cv"
         ios-src="https://ar-resume-assets.s3.eu-west-2.amazonaws.com/one.usdz"
-      ></model-viewer>
+      >
+        <button slot="ar-button" className={styles.ar_button}>
+          👋 Activate AR
+        </button>
+      </model-viewer>
     </>
   );
 };
